@@ -6,10 +6,6 @@
 	var currentCity = null;
 	var cities = ['shanghai','beijing','nanjing','weihai','hangzhou','xian','haerbin','nanchang','xiamen','shouer','dongjing','xinjiapo','lizi','manchesite','gelasige','duke','kangnaier','laisi','jiazhouligong','qiaozhicheng']
 	var pos = [[121,31],[116,40],[118.5,31.5],[122,37.4],[120,30],[108,34.1],[126.6,45.5],[115.7,28.5],[118,24.4],[127,37.5],[139.75,35.68],[104,1.3],[-1.5,53.8],[-2.2,53.5],[-4.25,56],[-78.9,36],[-76.48,42.45],[-95.4,29.71],[-118.12,34.136],[-77.59,38.935]]
-
-	document.body.addEventListener('touchmove' , function(e){ 
-      e.preventDefault(); 
-	})
 	
 	document.onkeydown = function(event){
 	  if(event.keyCode < 91 && event.keyCode > 64){
@@ -21,7 +17,7 @@
 		currentX = event.clientX
 		currentY = event.clientY
 		if(currentCity != null){document.getElementById('info').src = 'info_'+cities[currentCity]+'-min.jpg';}
-		else{document.getElementById('info').src = '';}
+		else{document.getElementById('info').src = 'info-min.jpg';}
 	}
 	
   var canvas = document.getElementById('quakeCanvas');
@@ -29,8 +25,8 @@
   // Create our Planetary.js planet and set some initial values;
   // we use several custom plugins, defined at the bottom of the file
   var planet = planetaryjs.planet();
-  planet.loadPlugin(autocenter({extraWidth: -0}));
-  planet.loadPlugin(autoscale({extraHeight: -0}));
+  planet.loadPlugin(autocenter({extraWidth: -document.body.clientWidth/2, extraHeight: 0}));
+  planet.loadPlugin(autoscale({extraHeight: -document.body.clientHeight/8}));
   planet.loadPlugin(planetaryjs.plugins.earth({
     topojson: { file:   'world-110m.json' },
     oceans:   { fill:   '#001320' },
