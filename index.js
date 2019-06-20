@@ -145,7 +145,7 @@
           pulse++;
           if(pulse % 30 == 0){
             if(is_phone){
-				planet.plugins.pings.add(121,31,{color: "gold", ttl: 2000, angle: 1})//上海
+				planet.plugins.pings.add(121,31,{color: "gold", ttl: 20000, angle: 1})//上海
 				planet.plugins.pings.add(116,40,{color: "white", ttl: 2000, angle: 1})//北京
 				planet.plugins.pings.add(118.5,31.5,{color: "salmon", ttl: 720, angle: 1})//南京
 				planet.plugins.pings.add(122,37.4,{color: "greenyellow", ttl: 320, angle: 1})//威海
