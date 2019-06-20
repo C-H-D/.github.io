@@ -78,7 +78,7 @@
       this.plugins.autorotate.resume();
     }
   }));
-  planet.loadPlugin(autorotate(8));
+  planet.loadPlugin(autorotate(0.1));
   planet.projection.rotate([100, -10, 0]);
   planet.draw(canvas);
 
