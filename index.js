@@ -28,7 +28,7 @@
         lastTouchEnd = now;
     }, false);
 	document.body.addEventListener('touchmove', function (e) { 
-	if(e.target.id == 'quakeCanvas')e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
+	if(e.target.id == 'quakeCanvas'){e.preventDefault();} //阻止默认的处理方式(阻止下拉滑动的效果)
 	}, {passive: false}); //passive 参数不能省略，用来兼容ios和android 
     // 阻止双指放大
     document.addEventListener('gesturestart', function(event) {
