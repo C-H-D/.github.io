@@ -144,26 +144,50 @@
           var delta = now - lastTick;
           pulse++;
           if(pulse % 30 == 0){
-            planet.plugins.pings.add(121,31,{color: "gold", ttl: 4666, angle: 1})//上海
-			planet.plugins.pings.add(116,40,{color: "white", ttl: 4666, angle: 1})//北京
-			planet.plugins.pings.add(118.5,31.5,{color: "salmon", ttl: 3600, angle: 1})//南京
-			planet.plugins.pings.add(122,37.4,{color: "greenyellow", ttl: 1600, angle: 1})//威海
-			planet.plugins.pings.add(120,30,{color: "pink", ttl: 1600, angle: 1})//杭州
-			planet.plugins.pings.add(108,34.1,{color: "orange", ttl: 1600, angle: 1})//西安
-			planet.plugins.pings.add(126.6,45.5,{color: "orange", ttl: 1600, angle: 1})//哈尔滨
-			planet.plugins.pings.add(115.7,28.5,{color: "fuchsia", ttl: 1600, angle: 1})//南昌
-			planet.plugins.pings.add(118,24.4,{color: "wheat", ttl: 1600, angle: 1})//厦门
-			planet.plugins.pings.add(127,37.5,{color: "aqua", ttl: 1600, angle: 1})//首尔
-			planet.plugins.pings.add(139.75,35.68,{color: "fuchsia", ttl: 1600, angle: 1})//东京
-			planet.plugins.pings.add(104,1.3,{color: "lightyellow", ttl: 1600, angle: 1})//新加坡
-			planet.plugins.pings.add(-1.5,53.8,{color: "silver", ttl: 1600, angle: 1})//利兹
-			planet.plugins.pings.add(-2.2,53.5,{color: "aqua", ttl: 1600, angle: 1})//曼彻斯特
-			planet.plugins.pings.add(-4.25,56,{color: "orange", ttl: 1600, angle: 1})//格拉斯哥
-			planet.plugins.pings.add(-78.9,36,{color: "salmon", ttl: 1600, angle: 1})//杜克大学
-			planet.plugins.pings.add(-76.48,42.45,{color: "powderblue", ttl: 1600, angle: 1})//康奈尔大学
-			planet.plugins.pings.add(-95.4,29.71,{color: "peachpuff", ttl: 1600, angle: 1})//莱斯大学
-			planet.plugins.pings.add(-118.12,34.136,{color: "orange", ttl: 1600, angle: 1})//加州理工
-			planet.plugins.pings.add(-77.59,38.935,{color: "lemonchiffon", ttl: 1600, angle: 1})//乔治城大学
+            if(is_phone){
+				planet.plugins.pings.add(121,31,{color: "gold", ttl: 20000, angle: 1})//上海
+				planet.plugins.pings.add(116,40,{color: "white", ttl: 20000, angle: 1})//北京
+				planet.plugins.pings.add(118.5,31.5,{color: "salmon", ttl: 7200, angle: 1})//南京
+				planet.plugins.pings.add(122,37.4,{color: "greenyellow", ttl: 3200, angle: 1})//威海
+				planet.plugins.pings.add(120,30,{color: "pink", ttl: 3200, angle: 1})//杭州
+				planet.plugins.pings.add(108,34.1,{color: "orange", ttl: 3200, angle: 1})//西安
+				planet.plugins.pings.add(126.6,45.5,{color: "orange", ttl: 3200, angle: 1})//哈尔滨
+				planet.plugins.pings.add(115.7,28.5,{color: "fuchsia", ttl: 3200, angle: 1})//南昌
+				planet.plugins.pings.add(118,24.4,{color: "wheat", ttl: 3200, angle: 1})//厦门
+				planet.plugins.pings.add(127,37.5,{color: "aqua", ttl: 3200, angle: 1})//首尔
+				planet.plugins.pings.add(139.75,35.68,{color: "fuchsia", ttl: 3200, angle: 1})//东京
+				planet.plugins.pings.add(104,1.3,{color: "lightyellow", ttl: 3200, angle: 1})//新加坡
+				planet.plugins.pings.add(-1.5,53.8,{color: "silver", ttl: 4600, angle: 1})//利兹
+				planet.plugins.pings.add(-2.2,53.5,{color: "aqua", ttl: 3200, angle: 1})//曼彻斯特
+				planet.plugins.pings.add(-4.25,56,{color: "orange", ttl: 3200, angle: 1})//格拉斯哥
+				planet.plugins.pings.add(-78.9,36,{color: "salmon", ttl: 3200, angle: 1})//杜克大学
+				planet.plugins.pings.add(-76.48,42.45,{color: "powderblue", ttl: 3200, angle: 1})//康奈尔大学
+				planet.plugins.pings.add(-95.4,29.71,{color: "peachpuff", ttl: 3200, angle: 1})//莱斯大学
+				planet.plugins.pings.add(-118.12,34.136,{color: "orange", ttl: 3200, angle: 1})//加州理工
+				planet.plugins.pings.add(-77.59,38.935,{color: "lemonchiffon", ttl: 3200, angle: 1})//乔治城大学
+			}
+			else{
+				planet.plugins.pings.add(121,31,{color: "gold", ttl: 2333, angle: 1})//上海
+				planet.plugins.pings.add(116,40,{color: "white", ttl: 2333, angle: 1})//北京
+				planet.plugins.pings.add(118.5,31.5,{color: "salmon", ttl: 1800, angle: 1})//南京
+				planet.plugins.pings.add(122,37.4,{color: "greenyellow", ttl: 800, angle: 1})//威海
+				planet.plugins.pings.add(120,30,{color: "pink", ttl: 800, angle: 1})//杭州
+				planet.plugins.pings.add(108,34.1,{color: "orange", ttl: 800, angle: 1})//西安
+				planet.plugins.pings.add(126.6,45.5,{color: "orange", ttl: 800, angle: 1})//哈尔滨
+				planet.plugins.pings.add(115.7,28.5,{color: "fuchsia", ttl: 800, angle: 1})//南昌
+				planet.plugins.pings.add(118,24.4,{color: "wheat", ttl: 800, angle: 1})//厦门
+				planet.plugins.pings.add(127,37.5,{color: "aqua", ttl: 800, angle: 1})//首尔
+				planet.plugins.pings.add(139.75,35.68,{color: "fuchsia", ttl: 800, angle: 1})//东京
+				planet.plugins.pings.add(104,1.3,{color: "lightyellow", ttl: 800, angle: 1})//新加坡
+				planet.plugins.pings.add(-1.5,53.8,{color: "silver", ttl: 1500, angle: 1})//利兹
+				planet.plugins.pings.add(-2.2,53.5,{color: "aqua", ttl: 800, angle: 1})//曼彻斯特
+				planet.plugins.pings.add(-4.25,56,{color: "orange", ttl: 800, angle: 1})//格拉斯哥
+				planet.plugins.pings.add(-78.9,36,{color: "salmon", ttl: 800, angle: 1})//杜克大学
+				planet.plugins.pings.add(-76.48,42.45,{color: "powderblue", ttl: 800, angle: 1})//康奈尔大学
+				planet.plugins.pings.add(-95.4,29.71,{color: "peachpuff", ttl: 800, angle: 1})//莱斯大学
+				planet.plugins.pings.add(-118.12,34.136,{color: "orange", ttl: 800, angle: 1})//加州理工
+				planet.plugins.pings.add(-77.59,38.935,{color: "lemonchiffon", ttl: 800, angle: 1})//乔治城大学
+			}
             if(pulse>100000) pulse = 0;
           }
 		  
@@ -177,7 +201,7 @@
 		  if(min < 1.5){pause = true;}
 		  else{pause = false; currentCity = null;}
           var rotation = planet.projection.rotate();
-          rotation[0] += degPerSec * delta / 1600;
+          rotation[0] += degPerSec * delta / 3200;
           if (rotation[0] >= 180) rotation[0] -= 360;
           if(!pause && !pause_key && !is_phone){planet.projection.rotate(rotation);}
           lastTick = now;
