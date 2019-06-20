@@ -27,6 +27,10 @@
 	  }
 	}
 	
+	document.ontouchmove = function(e){
+        e.preventDefault();
+    }
+	
 	document.onmousemove = function(event){
 		currentX = event.clientX
 		currentY = event.clientY
