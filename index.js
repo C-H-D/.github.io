@@ -27,7 +27,9 @@
         }
         lastTouchEnd = now;
     }, false);
-
+	document.addEventListener('touchmove', function(event) {
+        event.preventDefault();
+    });
     // 阻止双指放大
     document.addEventListener('gesturestart', function(event) {
         event.preventDefault();
@@ -44,10 +46,6 @@
 		  pause_key = !pause_key
 	  }
 	}
-	
-	document.ontouchmove = function(e){
-        e.preventDefault();
-    }
 	
 	document.onmousemove = function(event){
 		currentX = event.clientX
