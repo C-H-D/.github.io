@@ -25,8 +25,8 @@
   // Create our Planetary.js planet and set some initial values;
   // we use several custom plugins, defined at the bottom of the file
   var planet = planetaryjs.planet();
-  planet.loadPlugin(autocenter({extraWidth: -666}));
-  planet.loadPlugin(autoscale({extraHeight: -120}));
+  planet.loadPlugin(autocenter({extraWidth: -0}));
+  planet.loadPlugin(autoscale({extraHeight: -0}));
   planet.loadPlugin(planetaryjs.plugins.earth({
     topojson: { file:   'world-110m.json' },
     oceans:   { fill:   '#001320' },
