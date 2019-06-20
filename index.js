@@ -7,6 +7,12 @@
 	var cities = ['shanghai','beijing','nanjing','weihai','hangzhou','xian','haerbin','nanchang','xiamen','shouer','dongjing','xinjiapo','lizi','manchesite','gelasige','duke','kangnaier','laisi','jiazhouligong','qiaozhicheng']
 	var pos = [[121,31],[116,40],[118.5,31.5],[122,37.4],[120,30],[108,34.1],[126.6,45.5],[115.7,28.5],[118,24.4],[127,37.5],[139.75,35.68],[104,1.3],[-1.5,53.8],[-2.2,53.5],[-4.25,56],[-78.9,36],[-76.48,42.45],[-95.4,29.71],[-118.12,34.136],[-77.59,38.935]]
 	
+	window.addEventListener("orientationchange", reload, false);
+	function reload(){
+	  window.location.reload(true);
+	  return false;
+	}
+	
 	document.onkeydown = function(event){
 	  if(event.keyCode < 91 && event.keyCode > 64){
 		  pause_key = !pause_key
