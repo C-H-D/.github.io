@@ -9,7 +9,7 @@
 	
 	window.addEventListener("orientationchange", reload, false);
 	function reload(){
-	  window.location.href=window.location.href+"?id="+10000*Math.random();
+	  window.location.href=window.location.href+"?id="+1000*Math.random();
 	  return false;
 	}
 	
