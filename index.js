@@ -21,6 +21,8 @@
         }
     });
     document.addEventListener('touchend', function(event) {
+		currentX = event.clientX
+		currentY = event.clientY
         var now = (new Date()).getTime();
         if (now - lastTouchEnd <= 300) {
             event.preventDefault();
@@ -49,8 +51,6 @@
 	document.onmousemove = function(event){
 		currentX = event.clientX
 		currentY = event.clientY
-		if(currentCity != null){document.getElementById('info').src = 'info_'+cities[currentCity]+'-min.jpg';}
-		else{document.getElementById('info').src = 'info-min.jpg';}
 	}
 	
   var canvas = document.getElementById('quakeCanvas');
@@ -206,6 +206,8 @@
           if (rotation[0] >= 180) rotation[0] -= 360;
           if(!pause && !pause_key && !is_phone){planet.projection.rotate(rotation);}
           lastTick = now;
+		  if(currentCity != null){document.getElementById('info').src = 'info_'+cities[currentCity]+'-min.jpg';}
+		  else{document.getElementById('info').src = 'info-min.jpg';}
         }
       });
     };
