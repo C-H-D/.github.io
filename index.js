@@ -17,7 +17,7 @@
 		currentX = event.clientX
 		currentY = event.clientY
 		if(currentCity != null){document.getElementById('info').src = 'info_'+cities[currentCity]+'-min.jpg';}
-		else{document.getElementById('info').src = 'info-min.jpg';}
+		else{document.getElementById('info').src = '';}
 	}
 	
   var canvas = document.getElementById('quakeCanvas');
@@ -25,8 +25,8 @@
   // Create our Planetary.js planet and set some initial values;
   // we use several custom plugins, defined at the bottom of the file
   var planet = planetaryjs.planet();
-  planet.loadPlugin(autocenter({extraWidth: -document.body.clientWidth/2, extraHeight: 0}));
-  planet.loadPlugin(autoscale({extraHeight: -document.body.clientHeight/8}));
+  planet.loadPlugin(autocenter({extraWidth: -window.innerWidth/2, extraHeight: 0}));
+  planet.loadPlugin(autoscale({extraHeight: -window.innerHeight/8}));
   planet.loadPlugin(planetaryjs.plugins.earth({
     topojson: { file:   'world-110m.json' },
     oceans:   { fill:   '#001320' },
