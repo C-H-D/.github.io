@@ -168,7 +168,7 @@
 			}
 			else{
 				planet.plugins.pings.add(121,31,{color: "gold", ttl: 23333, angle: 1})//上海
-				planet.plugins.pings.add(116,40,{color: "white", ttl: 2333, angle: 1})//北京
+				planet.plugins.pings.add(116,40,{color: "white", ttl: 233, angle: 1})//北京
 				planet.plugins.pings.add(118.5,31.5,{color: "salmon", ttl: 1800, angle: 1})//南京
 				planet.plugins.pings.add(122,37.4,{color: "greenyellow", ttl: 800, angle: 1})//威海
 				planet.plugins.pings.add(120,30,{color: "pink", ttl: 800, angle: 1})//杭州
