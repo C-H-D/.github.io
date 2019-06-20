@@ -50,7 +50,7 @@
 		currentX = event.clientX
 		currentY = event.clientY
 		if(currentCity != null){document.getElementById('info').src = 'info_'+cities[currentCity]+'-min.jpg';}
-		else{document.getElementById('info').src = '';}
+		else{document.getElementById('info').src = 'info-min.jpg';}
 	}
 	
   var canvas = document.getElementById('quakeCanvas');
