@@ -19,6 +19,8 @@
         if (event.touches.length > 1) {
             event.preventDefault();
         }
+		if(currentCity != null){document.getElementById('info').src = 'info_'+cities[currentCity]+'-min.jpg';}
+		else{document.getElementById('info').src = 'info-min.jpg';}
     });
     document.addEventListener('touchend', function(event) {
 		currentX = event.clientX
