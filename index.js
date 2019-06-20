@@ -19,19 +19,26 @@
         if (event.touches.length > 1) {
             event.preventDefault();
         }
+		currentX = event.clientX
+		currentY = event.clientY
+		var temp = planet.projection.invert([currentX-5,currentY]);
+		var min = 999999;
+		var temp_dst = 0;
+		for(i=0;i<20;i++){
+			temp_dst = Math.sqrt(Math.pow(temp[0]-pos[i][0],2)+Math.pow(temp[1]-pos[i][1],2));
+			if(temp_dst < min){min = temp_dst; currentCity = i;}
+		}
+		if(min < 1.5){pause = true;}
+		else{pause = false; currentCity = null;}
 		if(currentCity != null){document.getElementById('info').src = 'info_'+cities[currentCity]+'-min.jpg';}
 		else{document.getElementById('info').src = 'info-min.jpg';}
     });
     document.addEventListener('touchend', function(event) {
-		currentX = event.clientX
-		currentY = event.clientY
         var now = (new Date()).getTime();
         if (now - lastTouchEnd <= 300) {
             event.preventDefault();
         }
         lastTouchEnd = now;
-		if(currentCity != null){document.getElementById('info').src = 'info_'+cities[currentCity]+'-min.jpg';}
-		else{document.getElementById('info').src = 'info-min.jpg';}
     }, false);
 	document.body.addEventListener('touchmove', function (e) { e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
 	}, {passive: false}); //passive 参数不能省略，用来兼容ios和android 
